@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+<body>
+    <!-- <div class="menu" >
+        <section>
+                <ul>
+                    <li><a href="#" data-text="Home" class="list">Home</a></li>
+                    <li><a href="#" data-text="Sign in" class="list">Sign in</a></li>
+                    <li><a href="#" data-text="Sign up" class="list">Sign up</a></li>
+                    <li><a href="#" data-text="Track order" class="list">Track order</a></li>
+                    <li><a href="#" data-text="Cart" class="list">Cart</a></li>
+                </ul>        
+        </section>
+    </div> -->
+    <input type="checkbox" id="check">
+    <label for="check">
+        <i class="fas fa-bars" id="btn"></i>
+        <i class="fas fa-times" id="cancel"></i>
+    </label>
+    <div class="sidebar">
+        <header><a href="#"><i class="far fa-user-circle"></i>Hello, Sign in</a></header>
+        <ul>
+            <li><a href="#"><i class="fas fa-headphones-alt"></i>Headphones</a></li>
+            <li><a href="#"><i class="fas fa-tv"></i></i>Televisions</a></li>
+            <li><a href="#"><i class="fas fa-mobile-alt"></i></i>Mobiles</a></li>
+            <li><a href="#"><i class="fas fa-laptop"></i></i>Laptops</a></li>
+            <li><a href="#"><i class="fas fa-camera"></i></i>Cameras</a></li>
+            <li><a href="#"><i class="far fa-clock"></i></i>Watches</a></li>
+        </ul>
+    </div>
+    <div class="container" id="body">
+        <div class="box">
+            <h2 class="name">Sony</h2>
+            <div class="innerbox">
+                <a href="/headphones.html" class="buy">Explore</a>
+            </div>
+            <div class="circle"></div>
+            <img src="pics/headphones/headphones_PNG7659 (1).png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Beats by Dr. Dre</h2>
+            <div class="innerbox">
+                <a href="#" class="buy">Explore</a>
+            </div>
+            <div class="circle"></div>
+            <img src="pics/tv/pngfind.com-samsung-led-tv-png-3123076.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Bose</h2>
+            <div class="innerbox">
+                <a href="#" class="buy">Explore</a>
+            </div>
+            <div class="circle"></div>
+            <img src="pics/mobile/pngfind.com-galaxy-background-png-3023944.png" class="product" id="tilt">
+        </div>
+        <div class="box">
+            <h2 class="name">Walkmann</h2>
+            <div class="innerbox">
+                <a href="#" class="buy">Explore</a>
+            </div>
+            <div class="circle"></div>
+            <img src="pics/laptop/pngfind.com-laptops-png-3065236.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Walkmann</h2>
+            <div class="innerbox">
+                <a href="#" class="buy">Explore</a>
+            </div>
+            <div class="circle"></div>
+            <img src="pics/camera/pngfind.com-camera-clipart-png-41112.png" class="product">
+        </div>
+        <div class="box">
+            <h2 class="name">Walkmann</h2>
+            <div class="innerbox">
+                <a href="#" class="buy">Explore</a>
+            </div>
+            <div class="circle"></div>
+            <img src="pics/watches/pngfind.com-apple-watch-png-99752.png" class="product">
+        </div>
+    </div>
+      <script src="vanilla-tilt.min.js"></script>
+      <script>
+          VanillaTilt.init(document.querySelectorAll(".box"), {
+		max: 25,
+		speed: 400});
+      </script> 
+</body>
+</html>
