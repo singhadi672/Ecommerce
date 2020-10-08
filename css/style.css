@@ -1,0 +1,381 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body
+{
+    background: #131313;
+}
+
+body #body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    transition: all 0.5s;
+}
+
+.container{
+
+    position: relative;
+    display: flex;
+    justify-content: wrap;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 1200px;
+    padding: 40px;
+    transform-style: preserve-3d;
+    margin-left: 50px;
+    margin-bottom: 20px;
+
+}
+
+.container .box{
+
+    position: relative;
+    width: 270px;
+    height: 350px;  
+    background: #232323;
+    border-radius: 20px;
+    transform-style: preserve-3d;
+    justify-content: center;
+    margin-left: 60px;
+    margin-bottom: 70px;
+}
+
+.container .box::before {
+
+    content: 'MUSIC';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4.5em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box:hover::before, .container .box:hover::after{
+
+    opacity: 0.1;
+}
+
+.container .box::after {
+
+    content: 'HEADPHONES';
+    position: absolute;
+    bottom: 20px;
+    font-size: 2.4em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+
+.container .box .name{
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,75px);
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+
+}
+
+.container .box:hover .name{
+
+    top: 40px;
+    opacity: 1;
+}
+
+.container .box .innerbox{
+
+    position: absolute;
+    bottom: 0;
+    right: 135px;
+    text-align: center;
+    color: #ffffff;
+    width: 100%;
+    transform-style: preserve-3d;
+    transform: translate3d(0,0,50px);
+    transition: 0.5s;
+    opacity: 1;
+    z-index: 12;
+
+}
+
+.container .box:hover .innerbox{
+
+    bottom: 40px;
+    opacity: 1;
+}
+
+.container .box .innerbox .buy{
+
+    position: relative;
+    bottom: 0;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,0,75px);
+    color: #ffffff;
+    background: #333333;
+    padding: 10px 25px;
+    border-radius: 30px;
+    text-decoration: none;
+    transition: 0.5s;
+    opacity: 0;
+    z-index: 10;
+}
+
+.container .box:hover .innerbox .buy{
+
+    bottom: 30px;
+    opacity: 1;
+}
+
+.container .box .circle{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,50px);
+    z-index: 10;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    transition: 0.5s;
+    background: #ffffff;
+    opacity: 1;
+
+}
+
+.container .box .product{
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    max-width: 210px;
+    max-height: 210px;
+    transition: 0.5s;
+    z-index: 11;
+    transform-style: preserve-3d;
+    transform: translate3d(-50%,-50%,50px) rotate(15deg);
+}
+
+
+.container .box:nth-child(1) .circle,
+.container .box:nth-child(1) .buy{
+
+    background: #3ce425;
+}
+
+.container .box:nth-child(2) .circle,
+.container .box:nth-child(2) .buy{
+
+    background: #2aa4d4;
+}
+
+.container .box:nth-child(3) .circle,
+.container .box:nth-child(3) .buy{
+
+    background: #badd1e;
+}
+
+.container .box:nth-child(4) .circle,
+.container .box:nth-child(4) .buy{
+
+    background: #693c3c;
+}
+.container .box:nth-child(5) .circle,
+.container .box:nth-child(5) .buy{
+
+    background: #6d0f8a;
+}
+.container .box:nth-child(6) .circle,
+.container .box:nth-child(6) .buy{
+
+    background: #f80404;
+}
+
+
+/* sidebar css */
+
+.sidebar{
+
+    position: fixed;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: #000000;
+    transition: all 0.5s ease;
+    z-index: 2;
+}
+
+.sidebar header{
+    background: rgb(55, 56, 54);
+    text-align: center;
+}
+
+.sidebar header a{
+
+    font-size: 20px;
+    line-height: 55px;
+    color: blanchedalmond;
+    transition: 0.5s;
+    
+}
+
+.sidebar ul a{
+
+    display: block;
+    height: 100%;
+    width: 100%;
+    line-height: 40px;
+    font-size: 15px;
+    color: #ffffff;
+    padding-left: 40px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid black;
+    transition: 0.5s;
+}
+
+ul li:hover a{
+
+    padding-left: 50px;
+}
+
+.sidebar ul a i{
+    margin-right: 16px;
+}
+
+.sidebar header i{
+    margin-right: 16px;
+}
+
+.sidebar header:hover a{
+    
+    padding-right: 50px;
+}
+
+#check{
+    display: none;
+}
+
+label #btn, label #cancel{
+    position: absolute;
+    cursor: pointer;
+}
+
+label #btn{
+
+    left: 20px;
+    top: 2px;
+    font-size: 25px;
+    color: white;
+    z-index: 1;
+}
+
+label #cancel{
+
+    z-index: 1221;
+    left: -235px;
+    top: 5px;
+    font-size: 15px;
+    color: white;
+    position: fixed;
+    transition: all 0.5s ease;
+}
+#check:checked ~ .sidebar{
+
+    left: 0;
+}
+
+#check:checked ~ label #cancel{
+
+    left: 250px;
+    opacity: 1;
+    /* pointer-events: none; */
+}
+#check:checked ~ label #cancel{
+
+    left: 235px;
+}
+
+#check:checked ~ #body{
+    margin-left: 235px;
+}
+
+
+
+/* top menu css */
+.menu{
+    height: 100px;
+}
+
+/* ul{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-height: 50px;
+}
+
+ul li{
+
+    list-style: none;
+    margin-top: 50px;
+    margin-left: 100px;
+    
+}
+
+ul li a{
+    display: block;
+    text-align: center;
+    font-size: 2em;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 8vh;
+    z-index: 1;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+ul li a::before{
+
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    text-align: center;
+    font-size: 4em;
+    color: #2196f3;
+    opacity: 0;
+    line-height: 25vh;
+    transition: 0.5s;
+
+}
+
+ul li:hover a::before{
+    opacity: 1;
+} */
