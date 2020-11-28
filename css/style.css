@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
 
 *
 {
@@ -30,11 +30,12 @@ body #body{
     justify-content: wrap;
     align-items: center;
     flex-wrap: wrap;
-    width: 1200px;
+    width: fit-content;
     padding: 40px;
     transform-style: preserve-3d;
     margin-left: 50px;
     margin-bottom: 20px;
+    top: 100px;
 
 }
 
@@ -47,11 +48,12 @@ body #body{
     border-radius: 20px;
     transform-style: preserve-3d;
     justify-content: center;
+    align-items: center;
     margin-left: 60px;
     margin-bottom: 70px;
 }
 
-.container .box::before {
+/* .container .box:nth-child(1)::before {
 
     content: 'MUSIC';
     position: absolute;
@@ -63,20 +65,114 @@ body #body{
     font-style: italic;
     opacity: 0;
     transition: 0.5s;
-}
+} */
 
-.container .box:hover::before, .container .box:hover::after{
+/* .container .box:nth-child(2)::before {
+
+    content: 'Entertain';
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 4.5em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+} */
+
+.container .box:hover::before, .container .box:nth-child(1):hover::after{
+
+    opacity: 0.1;
+}
+.container .box:hover::before, .container .box:nth-child(2):hover::after{
+
+    opacity: 0.1;
+}
+.container .box:hover::before, .container .box:nth-child(3):hover::after{
+
+    opacity: 0.1;
+}
+.container .box:hover::before, .container .box:nth-child(4):hover::after{
+
+    opacity: 0.1;
+}
+.container .box:hover::before, .container .box:nth-child(5):hover::after{
+
+    opacity: 0.1;
+}
+.container .box:hover::before, .container .box:nth-child(6):hover::after{
 
     opacity: 0.1;
 }
 
-.container .box::after {
+.container .box:nth-child(1)::after {
 
     content: 'HEADPHONES';
     position: absolute;
     bottom: 20px;
-    font-size: 2.4em;
+    font-size: 2.6em;
     font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:nth-child(2)::after {
+
+    content: 'TELEVISION';
+    position: absolute;
+    bottom: 20px;
+    font-size: 3.2em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:nth-child(3)::after {
+
+    content: 'MOBILE PHONES';
+    position: absolute;
+    bottom: 20px;
+    font-size: 2.2em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:nth-child(4)::after {
+
+    content: 'LAPTOPS';
+    position: absolute;
+    bottom: 20px;
+    font-size: 4em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:nth-child(5)::after {
+
+    content: 'Cameras';
+    position: absolute;
+    bottom: 20px;
+    font-size: 3.5em;
+    font-weight: 900;
+    color: #ffffff;
+    font-style: italic;
+    opacity: 0;
+    transition: 0.5s;
+}
+.container .box:nth-child(6)::after {
+
+    content: 'SMART WATCHES';
+    position: absolute;
+    bottom: 20px;
+    font-size: 2em;
+    font-weight: 100;
     color: #ffffff;
     font-style: italic;
     opacity: 0;
@@ -224,9 +320,10 @@ body #body{
     left: -250px;
     width: 250px;
     height: 100%;
-    background: #000000;
+    background: #222222;
     transition: all 0.5s ease;
-    z-index: 2;
+    z-index: 1;
+    top: 8%;
 }
 
 .sidebar header{
@@ -258,7 +355,7 @@ body #body{
     transition: 0.5s;
 }
 
-ul li:hover a{
+.sidebar ul li:hover a{
 
     padding-left: 50px;
 }
@@ -288,17 +385,27 @@ label #btn, label #cancel{
 label #btn{
 
     left: 20px;
-    top: 2px;
+    top: 5px;
     font-size: 25px;
     color: white;
     z-index: 1;
+    position: fixed;
+    padding: 5px;
+}
+
+label #btn:hover{
+
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px cyan,
+                0 0 5px cyan;
+    transition: 0.5s;
 }
 
 label #cancel{
 
     z-index: 1221;
     left: -235px;
-    top: 5px;
+    top: 55px;
     font-size: 15px;
     color: white;
     position: fixed;
@@ -323,10 +430,287 @@ label #cancel{
 #check:checked ~ #body{
     margin-left: 235px;
 }
+/* top navigation css */
+
+nav{
+
+    background: rgb(32, 34, 31);
+    line-height: 1px;
+    position: fixed;
+    width: 1350px;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+
+nav::after{
+
+    content: '';
+    clear: both;
+    display: table;
+}
+
+nav .logo{
+    float: left;
+    color: white;
+    font-size: 30px;
+    font-weight: 600;
+    line-height: 50px;
+    padding-left: 100px;
+}
+
+nav .logo img{
+
+    max-height: 100px;
+    max-height: 30px;
+    margin-right: 15px;
+    align-items: center;
+}
+
+/* search button css */
+.search-box{
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background: #2f3640;
+    height: 30px;
+    border-radius: 40px;
+    padding: 5px;
+    padding-bottom: 20px;
+    margin-top: 0px;
+}
+
+.search-box:hover > .search-txt{
+
+    width: 400px;
+}
 
 
+.search-btn{
 
-/* top menu css */
+    color: cyan;
+    float: right;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.search-txt{
+
+    border : none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0px;
+    color: #ffffff;
+    font-size: 15px;
+    transition: 0.7s;
+    line-height: 0px;
+    margin-left: 10px;
+    width: 0px;
+
+}
+
+nav ul{
+
+    float: right;
+    list-style: none;
+    margin-right: 40px;
+    position: relative;
+    top: 0px;
+}
+
+nav i{
+
+    margin-left: 5px;
+}
+
+nav ul li{
+
+    /* float: left; */
+    display: inline-block;
+    margin: 0px 5px;
+    background: rgb(32, 34, 31);
+    top: 0px;
+}
+
+nav ul li a{
+
+    color: #ffffff;
+    line-height: 50px;
+    font-size: 14px;
+    padding: 10px 15px;
+    
+}
+
+nav ul li a:hover{
+
+    color: #35e012;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #59dd0c,
+                0 0 5px #25db0d;
+    transition: 0.5s;
+}
+
+nav ul ul li a:hover{
+
+    color:#4ccf18;
+    box-shadow: none;
+}
+
+nav ul ul{
+    position: absolute;
+    top: 70px;
+    opacity: 0;
+    visibility: hidden;
+    transition: top 0.3s;
+}
+
+nav ul li:hover > ul{
+
+    top: 50px;
+    opacity: 1;
+    visibility: visible;
+}
+
+nav ul ul li{
+    position: relative;
+    margin: 0px;
+    width: 150px;
+    float: none;
+    display: list-item;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+    
+}
+
+nav ul ul ul li{
+
+    position: relative;
+    top: -70px;
+    left: 150px;
+}
+
+/* footer css */
+
+footer{
+
+    /* position: fixed; */
+    bottom: 0px;
+    width: 100%;
+    height: 280px;
+    background: black;
+    color: white;
+    margin-top: 100px;
+}
+
+.main-content{
+
+    display: flex;
+}
+
+.main-content .box{
+
+    flex-basis: 50%;
+    padding: 10px 20px;
+}
+
+.box .content{
+
+    margin: 20px 0 0 0;
+}
+
+.left .content .social{
+
+    margin: 20px 0 0 0;
+}
+
+.left .content .social a{
+
+    padding: 10px 5px;
+}
+.left .content .social a span{
+    font-size: 1.5em;
+    color: #222;
+}
+
+.left .content p{
+
+    text-align: justify;
+}
+
+.center .content .fas{
+
+    font-size: 1em;
+    background: #1a1a1a;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.4s;
+    cursor: pointer;
+
+}
+
+.center .content .fas:hover{
+
+    background: brown;
+}
+
+.center .content .text{
+
+    padding-left: 10px;
+}
+
+.center .content .phone{
+
+    margin: 10px 0px;
+}
+
+.right form .msg{
+
+    margin-top: 10px;
+}
+
+.right form input{
+
+    width: 100%;
+    font-size: 1rem;
+    background: #151515;
+    padding-left: 10px;
+    border: 1px solid #222222;
+}
+
+.right form .btn{
+
+    margin-top: 10px;
+}
+
+.right form .btn button{
+
+    height: 40px;
+    width: 100%;
+    border: none;
+    outline: none;
+    background: brown;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.right form .btn button:hover{
+
+    background: #fff;
+}
+
+/* top menu css {AUXILLARY}*/
 .menu{
     height: 100px;
 }

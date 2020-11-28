@@ -126,7 +126,7 @@ body{
 
 .container .card:nth-child(1)::after{
 
-    content: 'Sony';
+    content: 'Apple';
     position: absolute;
     top: 30%;
     left: -20%;
@@ -138,7 +138,7 @@ body{
 
 .container .card:nth-child(2)::after{
 
-    content: 'Beats';
+    content: 'Oneplus';
     position: absolute;
     top: 30%;
     left: -20%;
@@ -149,7 +149,7 @@ body{
 }
 .container .card:nth-child(3)::after{
 
-    content: 'Sony';
+    content: 'Vivo';
     position: absolute;
     top: 30%;
     left: -20%;
@@ -160,7 +160,7 @@ body{
 }
 .container .card:nth-child(4)::after{
 
-    content: 'Bose';
+    content: 'Samsung';
     position: absolute;
     top: 30%;
     left: -20%;
@@ -171,7 +171,7 @@ body{
 }
 .container .card:nth-child(5)::after{
 
-    content: 'Walkmann';
+    content: 'Google';
     position: absolute;
     top: 30%;
     left: -20%;
@@ -182,7 +182,7 @@ body{
 }
 .container .card:nth-child(6)::after{
 
-    content: 'Starmann';
+    content: 'Apple';
     position: absolute;
     top: 30%;
     left: -20%;
@@ -214,7 +214,7 @@ body{
     position: absolute;
     top: 45%;
     left: 50%;
-    transform: translate(-50%, -50%) rotate(-25deg);
+    transform: translate(-50%, -50%);
     max-width: 250px;
     max-height: 240px;
 
